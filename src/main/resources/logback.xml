@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %white(λ) %highlight(%-5level) %magenta(%logger) [%cyan(%M -> %L)] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>./log/traces.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%X{akkaTimestamp} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.romix.akka.serialization.kryo" level="ERROR" />
+    <logger name="org.apache.spark" level="WARN"/>
+    <logger name="org.apache.hadoop" level="WARN"/>
+    <logger name="org.spark_project" level="WARN"/>
+    <logger name="io.netty" level="WARN"/>
+    <logger name="ch.qos.logback" level="OFF"/>
+    <logger name="org.bitcoinj.core" level="OFF" />
+    <logger name="org.bitcoinj.net.NioClientManager" level="OFF" />
+
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
