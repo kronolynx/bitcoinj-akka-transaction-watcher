@@ -16,14 +16,13 @@
         </encoder>
     </appender>
 
-    <logger name="com.romix.akka.serialization.kryo" level="ERROR" />
-    <logger name="org.apache.spark" level="WARN"/>
-    <logger name="org.apache.hadoop" level="WARN"/>
-    <logger name="org.spark_project" level="WARN"/>
-    <logger name="io.netty" level="WARN"/>
+
     <logger name="ch.qos.logback" level="OFF"/>
     <logger name="org.bitcoinj.core" level="OFF" />
     <logger name="org.bitcoinj.net.NioClientManager" level="OFF" />
+    <logger name="org.bitcoinj.wallet.DeterministicKeyChain" level="OFF" />
+    <logger name="org.bitcoinj.net.ConnectionHandler" level="OFF" />
+    <logger name="org.bitcoinj.wallet.WalletFiles" level="OFF" />
 
 
     <root level="DEBUG">
