@@ -1,6 +1,6 @@
 import java.util.Date
 
-package object WatchWallet {
+package object watchwallet {
 
   case class TxBitcoin(txHash: String, updated: Date, outputs: List[TxAddress])
 
