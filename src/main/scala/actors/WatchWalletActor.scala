@@ -35,7 +35,7 @@ class WatchWalletActor(params: NetworkParameters) extends Actor with Stash {
     case WatchAddress(address) =>
       log.debug("watching address")
       watchWallet.addWatchAddress(address)
-    case UnWatchAddress(address) =>
+    case RemoveWatchedAddress(address) =>
       watchWallet.removeWatchAddress(address)
     case x: String => log.debug(s"got string $x")
     case x => log.debug(s"unknown $x")

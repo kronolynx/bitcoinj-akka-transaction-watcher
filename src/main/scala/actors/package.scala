@@ -13,7 +13,7 @@ package object actors {
     }
   }
 
-  case class UnWatchAddress(address: Address)
+  case class RemoveWatchedAddress(address: Address)
 
   case class AddListener(confirmations: Int,
                          callBack: (Int, TxBitcoin) => Unit,
